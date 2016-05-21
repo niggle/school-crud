@@ -1,7 +1,10 @@
+from __future__ import unicode_literals
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from schools.models import School
 
 
+@python_2_unicode_compatible
 class Classroom(models.Model):
     name = models.CharField(max_length=120)
     slug = models.SlugField()
